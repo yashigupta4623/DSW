@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+
+        .dsw-photo {
+            position: relative;
+            text-align: center;
+            color: rgb(43, 255, 0);
+
+
+        }
+
+        .photo img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+
+        }
+
+        .center {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+        }
+       
+        @keyframes slide-left {
+            0% {
+                transform: translate(100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translate(0px);
+                opacity: 1;
+            }
+        }
+
+        p1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 106px;
+            font-weight: 100;
+            /* animation: slide-left 0.4s linear forwards; */
+
+        }
+
+        p2 {
+            position: absolute;
+            top: 66%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 42px;
+        }
+        @media(max-width:414px){
+            p2{
+                top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+
+            }
+            .box {
+                top: 50%;
+            left: 50%;
+            cursor: pointer;
+            object-fit: cover;
+
+            }
+        }
+        .box p3 {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10px;
+            background-color: aliceblue;
+            width: 95px;
+            height: 10px;
+            color: black;
+            padding: 10px 10px 10px 10px;
+            cursor: pointer;
+            object-fit: cover;
+        }
+
+
+        .what {
+            background-color: #f7f7eb;
+            width: auto;
+            height: 500px;
+            object-fit: cover;
+          
+
+
+
+        }
+
+
+
+        .main {
+
+            margin-top: 7%;
+            left: 16px;
+            font-size: 50px;
+            margin-left: 40px;
+            position: relative;
+            display: table;
+
+        }
+      
+        @media(max-width:736px) {
+             
+            p2{
+                top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+}
+        }
+       
+       
+        .less-main {
+            /* position: fixed;
+            margin-top: 14%;
+            bottom: -20%;
+            left: 16px;
+            font-size: 14px;
+            margin-left: 40px;
+            max-width: 50%;
+            position: absolute; */
+
+            margin-top: 14%;
+            left: 16px;
+            font-size: 17px;
+            margin-left: 40px;
+            position: relative;
+            max-width: 60%;
+            display: table;
+
+        }
+
+        .pho {
+            margin-top: 7%;
+
+            /* bottom: -15%; */
+            right: 16px;
+            float: right;
+            margin-right: 50px;
+            object-fit: cover;
+            /* position: fixed; */
+
+
+        }
+
+        .pho img {
+            width: 260px;
+            height: 282px;
+            object-fit: cover;
+            border: 2px solid black;
+
+        }
+
+        @media(max-width:768px) {
+
+
+            .less-main {
+                max-width: 40%;
+                max-height: 40%;
+            }
+        }
+        @media(max-width:736px) {
+            .less-main {
+                max-width: 100%;
+                max-height: 90%;
+                margin-top: 30%;
+                top: 80%;
+            }
+        }
+        @media(max-width:414px) {
+            .less-main {
+                max-width: 100%;
+                max-height: 90%;
+                margin-top: 30%;
+                top: 84%;
+            }
+        }
+
+        @media(max-width:736px) {
+            .pho img {
+                width: 188px;
+    height: 205px;
+    /* margin-right: -133%; */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: -112%;
+}
+
+
+            
+        }
+
+       
+
+        @media(max-width:414px) {
+            .pho img {
+                width: 188px;
+    height: 205px;
+    /* margin-right: -133%; */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: -25%;
+            }
+        }
+
+
+        .five {
+            font-size: 50px;
+
+            /* bottom: 8px; */
+            left: 16px;
+
+            margin-left: 40px;
+            position: absolute;
+
+        }
+
+        @media(max-width:531px) {
+            .five {
+                font-size: 35px;
+                margin-left: 30px;
+                position: absolute;
+            }
+        }
+
+        
+
+        .team {
+            background: #f7f7eb;
+
+
+        }
+
+        @media(max-width:531px) {
+            .club p {
+                font-size: 35px;
+                margin-left: 30px;
+                position: absolute;
+            }
+        }
+
+      
+
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(3, 0.5fr);
+            gap: 10px;
+            padding: 10px;
+
+        }
+
+        .child {
+            display: grid;
+            place-items: center;
+            padding: 40px;
+
+        }
+
+        .child img {
+            width: 200px;
+            height: 180px;
+            object-fit: cover;
+            border: 2px solid black;
+        }
+
+        @media(max-width:768px) {
+            .parent {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+        
+        }
+
+        @media(max-width:480px) {
+            .parent {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 4px;
+
+            }
+
+            .child img {
+                width: 100px;
+                height: 113px;
+                align-items: center;
+                gap: 1px;
+            }
+        }
+
+        @media(max-width:535px) {
+            .parent {
+                /* grid-template-columns: repeat(2,1fr); */
+                gap: 6px;
+                margin: 0%;
+
+            }
+
+            .child {
+                width: 80%;
+    height: 70%;
+    align-items: center;
+    justify-content: center;
+            }
+        }
+
+        h1 {
+            font-size: 17px;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .inn {
+            font-size: 14px;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .club,
+        p {
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .bo {
+            border: 2px solid black;
+            /* margin: 10px; */
+            width: auto;
+            height: auto;
+            padding: 9px;
+
+        }
+
+        .b {
+
+            border: 2px solid black;
+            margin: 10px;
+            width: 100%;
+            height: auto;
+            padding: 9px;
+        }
+
+        p9 {
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        p9 a {
+            font-size: 20px;
+            color: black;
+            outline-offset: inherit;
+        }
+
+        h2 {
+            font-size: 20px;
+            padding-top: 8px;
+        }
+
+        .container {
+            display: flex;
+            gap: 24px;
+            flex-direction: row;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            padding: 16px;
+            max-width: 100%;
+
+        }
+
+        .card img {
+            width: 280px;
+            height: 290px;
+            color: white;
+
+        }
+
+        @media(max-width:534px) {
+            .card img {
+                width: 180px;
+                height: 190px;
+            }
+        }
+
+        @media(max-width:534px) {
+            .bo {
+                width: auto;
+                height: auto;
+            }
+        }
+
+        .tea {
+            background: chocolate;
+            width: auto;
+            height: 600px;
+        }
+
+        .ph {
+            display: flex;
+            margin-top: 7%;
+
+            left: 16px;
+            margin-left: 50px;
+
+            position: absolute;
+        }
+
+        .mai {
+            position: fixed;
+            right: 16px;
+            font-size: 17px;
+            color: white;
+            font-weight: 700;
+            margin-right: 20%;
+            margin-top: 10%;
+            position: absolute;
+            text-align: right;
+
+        }
+
+        .ma {
+            position: fixed;
+            right: 16px;
+            font-size: 10px;
+            margin-right: 13.4%;
+            margin-top: 13%;
+            position: absolute;
+            text-align: right;
+
+        }
+
+        hr {
+            width: 91%;
+            justify-content: center
+        }
+        @media(max-width:768px) {
+             #main {
+                max-width: 100%;
+                max-height: 90%;
+               
+                top: 72%;
+            }
+        }
+        @media(max-width:736px) {
+             #main {
+                max-width: 100%;
+    max-height: 90%;
+    top: 108%;
+    left: 27%;
+            }
+            p2{
+                top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+}
+        }
+        @media(max-width:414px) {
+            #main {
+                max-width: 100%;
+    max-height: 90%;
+    margin-left: -16%;
+    top: 59%;
+               
+           }
+           .pho img {
+            width: 188px;
+    height: 205px;
+    /* margin-right: -133%; */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: -31%;
+    margin-top: -144%;
+            }
+            .less-main {
+                max-width: 100%;
+    max-height: 117%;
+    top: 38%;
+    position: relative;
+    left: -2%;
+            }
+            p2{
+                top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 21px;
+
+            }
+            .five {
+                font-size: 24px;
+                margin-left: 0px;
+                margin-top: 30px;
+                position: absolute;
+            }
+            .club p {
+                font-size: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+            .child img {
+                width: 80%;
+    height: 70%;
+    align-items: center;
+    justify-content: center;
+            }
+        }
+        @media(max-width:375px) {
+            
+            #main {
+                top: 59%;
+    position: relative;
+    margin-left: -9%;
+    font-size: 39px;
+               
+           }
+           .pho img {
+            width: 188px;
+    height: 205px;
+    margin-right: -133%;
+    margin-top: -140%;
+    margin-left: -19%;
+            }
+            .less-main {
+                max-width: 100%;
+    max-height: 117%;
+    top: 38%;
+    position: relative;
+    left: -2%;
+            }
+            p2{
+                top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 21px;
+
+            }
+            .five {
+                font-size: 24px;
+                margin-left: 0px;
+                margin-top: 30px;
+                position: absolute;
+            }
+            .club p {
+                font-size: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+            .child img {
+                width: 80%;
+    height: 70%;
+    align-items: center;
+    justify-content: center;
+            }
+        
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="dsw-photo">
+        <div class="photo">
+            <img src="images/dsw.jpg">
+            <div class="center">Welcome To</div>
+            <p1>DSW</p1>
+            <p2>Dean Student Welfare</p2>
+            <div class="box">
+                <p3> Learn more </p3>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="what">
+
+        <div class="main" id="main">What is DSW?</div>
+        <div class="less-main">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nesciunt.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nesciunt.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nesciunt.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nesciunt.
+        </div>
+        <div class="pho"> <img src="images/download.jpg"></div>
+    </div>
+
+    <div class="team">
+        <div class="member">
+            <div class="five">
+                Get to Know Our Team
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+
+        <hr>
+        <div class="parent">
+            <div class="child"><img src="images/download (1).jpg">
+                <div class="inner">
+                    <h1>Liz Flaffham</h1>
+
+                </div>
+                <div class="inn"> CEO</div>
+            </div>
+            <div class="child"><img src="images/download (2).jpg">
+                <div class="inner">
+                    <h1>Liz Flaffham</h1>
+
+                </div>
+                <div class="inn"> CEO</div>
+            </div>
+            <div class="child"><img src="images/download (3).jpg">
+                <div class="inner">
+                    <h1>Liz Flaffham</h1>
+
+                </div>
+                <div class="inn"> CEO</div>
+            </div>
+            <div class="child"><img src="images/download (4).jpg">
+                <div class="inner">
+                    <h1>Liz Flaffham</h1>
+
+                </div>
+                <div class="inn"> CEO</div>
+            </div>
+            <div class="child"><img src="images/download (5).jpg">
+                <div class="inner">
+                    <h1>Liz Flaffham</h1>
+
+                </div>
+                <div class="inn"> CEO</div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    <div class="team">
+        <div class="club">
+            <p>
+                Clubs Under DSW
+            </p>
+        </div>
+        <div class="container">
+            <div class="card">
+                <img src="images/kbc.jpg">
+                <div class="bo">
+                    <p9>
+                        Total No of members ?
+                    </p9>
+                    <h2>
+                        Khushiyan Baaton Club
+                    </h2>
+                    <p9>
+                        <a href="kbc.html"> Click here --></a>
+                    </p9>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/ggc.jpg">
+                <div class="bo">
+                    <p9>
+                        Total No of members ?
+                    </p9>
+                    <h2>
+                        Khushiyan Baaton Club
+                    </h2>
+                    <p9>
+                        <a href="ggc.html"> Click here --></a>
+                    </p9>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/kALAKRITI.png">
+                <div class="bo">
+                    <p9>
+                        Total No of members ?
+                    </p9>
+                    <h2>
+                        Khushiyan Baaton Club
+                    </h2>
+                    <p9>
+                        <a href="kalakriti.html"> Click here --></a>
+                    </p9>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/megapixels.png">
+                <div class="bo">
+                    <p9>
+                        Total No of members ?
+                    </p9>
+                    <h2>
+                        Khushiyan Baaton Club
+                    </h2>
+                    <p9>
+                        <a href="megapixels.html"> Click here --></a>
+                    </p9>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/KATHPUTLIYAN.png">
+                <div class="bo">
+                    <p9>
+                        Total No of members ?
+                    </p9>
+                    <h2>
+                        Khushiyan Baaton Club
+                    </h2>
+                    <p9>
+                        <a href="kathputiyan.html"> Click here --></a>
+                    </p9>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/Jetsetters.jpg">
+                <div class="bo">
+                    <p9>
+                        Total No of members ?
+                    </p9>
+                    <h2>
+                        Khushiyan Baaton Club
+                    </h2>
+                    <p9>
+                        <a href="jetsetters.html"> Click here --></a>
+                    </p9>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/jUVENTAS.jpg">
+                <div class="bo">
+                    <p9>
+                        Total No of members ?
+                    </p9>
+                    <h2>
+                        Khushiyan Baaton Club
+                    </h2>
+                    <p9>
+                        <a href="juventas.html"> Click here --></a>
+                    </p9>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/sangrachna.jpeg">
+                <div class="bo">
+                    <p9>
+                        Total No of members ?
+                    </p9>
+                    <h2>
+                        Khushiyan Baaton Club
+                    </h2>
+                    <p9>
+                        <a href="sangrachna.html"> Click here --></a>
+                    </p9>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/PNG image.png">
+                <div class="bo">
+                    <p9>
+                        Total No of members ?
+                    </p9>
+                    <h2>
+                        Khushiyan Baaton Club
+                    </h2>
+                    <p9>
+                        <a href="png.html"> Click here --></a>
+                    </p9>
+                </div>
+            </div>
+        </div>
+
+        <div class="what">
+
+            <div class="main">Best Club Of
+                <br>
+                the Year
+            </div>
+
+            <div class="pho"> <img src="images/download.jpg">
+                <br>
+                <div class="b">
+                    <h2>
+                        Owner
+                    </h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="team">
+            <div class="club">
+                <p>
+                    NIET
+                </p>
+            </div>
+            <div class="parent">
+                <div class="child"><img src="images/raman.jpeg" style="width: 100%; height: auto;">
+                    <div class="b">
+                        <h2>
+                            Owner
+                        </h2>
+                        <p9>
+                            information about person
+                        </p9>
+                    </div>
+                </div>
+                <!-- <div class="child"><img src="images/somashekar dean admin.jpg" style="width: 100%; height: auto;">
+                <div class="b">
+                    <h2>
+                     Director
+                    </h2>
+                    <p9>
+                        information about person
+                    </p9>
+                </div></div>
+            <div class="child"><img src="images/somashekar dean admin.jpg" style="width: 100%; height: auto;">
+                <div class="b">
+                    <h2>
+                        Dsw Dean
+                    </h2>
+                    <p9>
+                        information about person
+                    </p9>
+                </div>
+           
+            </div> -->
+
+        </div>
+
+        <div class="tea">
+            <div class="member">
+                <div class="five">
+                    Get to Know Our Team
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <hr>
+            <div class="ph"> <img src="images/download.jpg" style="width: 90%; height: 400px;"></div>
+            <div class="mai">Address
+            </div>
+            <div class="ma">123 Anywhere St, Any City ST 1235</div>
+        </div>
+</body>
+
+</html>
